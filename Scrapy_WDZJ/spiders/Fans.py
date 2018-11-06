@@ -18,7 +18,7 @@ class BasicSpider(scrapy.Spider):
         ajaxURL = "https://member.wdzj.com/space/ajaxMore"
         return [FormRequest(ajaxURL, formdata={"uid": str(userID), "type": "fans", "page": '1'},
                             callback= lambda response, formdata={"uid": str(userID), "type": "fans", "page": '1'}, ajaxURL=ajaxURL:
-                            self.parse_AjaxMorePage(response, formdata, ajaxURL), dont_filter=True) for userID in range(1, 400)]
+                            self.parse_AjaxMorePage(response, formdata, ajaxURL), dont_filter=True) for userID in range(1, 1790000)]
 
 
     # def parse_firstPage(self,response):
